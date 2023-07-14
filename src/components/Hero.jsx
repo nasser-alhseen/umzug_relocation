@@ -274,6 +274,14 @@ input {
             padding-left: 1rem;
           }
         }
+        .background {
+          height: 80%;
+          img {
+            width: 100%;
+            height:60vh;
+            filter: brightness(60%);
+          }
+        }
         button {
           padding: 1rem;
           font-size: 0.8rem;
