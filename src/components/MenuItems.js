@@ -30,4 +30,10 @@ export const MenuItems = [
     cName: "nav-links",
     icon: ""
   },
+  {
+    title: "About Us",
+    url: "#aboutus",
+    cName: "nav-links",
+    icon: ""
+  },
 ];
