@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import service1 from "../assets/service1.png";
-import service2 from "../assets/service2.png";
-import service3 from "../assets/service3.png";
-import service4 from "../assets/service4.png";
+
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined';
@@ -38,24 +35,6 @@ export default function Services() {
     fetchServices();
   }, []);
 
-  const data = [
-    {
-      icon: 0,
-      subTitle: "Packing and unpacking services",
-    },
-    {
-      icon: 1,
-      subTitle: "Transportation of belongings to the new home",
-    },
-    {
-      icon: 2,
-      subTitle: "Assembly and disassembly of furniture",
-    },
-    {
-      icon: 3,
-      subTitle: "Cleaning the new home",
-    },
-  ];
 
   return (
     <Section id="services">

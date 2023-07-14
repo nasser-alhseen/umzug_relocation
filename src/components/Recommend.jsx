@@ -1,9 +1,5 @@
 import React, { useState,useEffect } from "react";
 import styled from "styled-components";
-import Destination1 from "../assets/moving.jpg";
-import Destination2 from "../assets/unpacking2.jpg";
-
-import Destination3 from "../assets/unpcking.jpg";
 
 
 
@@ -24,40 +20,6 @@ export default function Recommend() {
     fetchServices();
   }, []);
   
-  const data = [
-    {
-      image: Destination1,
-
-    },
-    {
-      image: Destination2,
-
-    },
-    {
-      image: Destination2,
-
-    },
-    {
-      image: Destination1,
-
-    },
-    {
-      image: Destination1,
-
-    },
-    {
-      image: Destination2,
-
-    },
-
-  ];
-
-  const packages = [
-    "The Weekend Break",
-    "The Package Holiday",
-    "The Group Tour",
-    "Long Term Slow Travel",
-  ];
 
   const [active, setActive] = useState(1);
   return (

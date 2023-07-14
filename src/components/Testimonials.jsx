@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import avatarImage from "../assets/me.jpg";
 import { useState, useEffect } from "react";
 export default function Testimonials() {
   const [opinions, setOpinions] = useState([]);
