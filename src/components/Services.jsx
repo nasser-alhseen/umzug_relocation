@@ -77,7 +77,7 @@ margin-right:1rem;
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
-    background-color: #4854A1;
+    background-color: #2656c7;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.3s ease-in-out;
     &:hover {

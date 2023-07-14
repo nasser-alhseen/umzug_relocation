@@ -56,7 +56,7 @@ const Section = styled.section`
     margin: 0 2rem;
     gap: 2rem;
     .testimonial {
-      background-color: rgb(186, 214, 238);;
+      background-color:#2656c7;
       padding-right: 1rem;
       padding-left: 1rem;
       padding-top: 0.5rem;
