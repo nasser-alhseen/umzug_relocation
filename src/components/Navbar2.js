@@ -24,7 +24,7 @@ const Navbar = () => {
       <ul className={icon ? "nav-menu active" : "nav-menu"}>
         
         {MenuItems.map((item, index) => (
-            <li key={index}>
+            <li className="navLi" key={index}>
               <a href={item.url} className={item.cName}>
                 {item.title}
               </a>
