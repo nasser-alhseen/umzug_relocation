@@ -39,7 +39,7 @@ export default function Services() {
   return (
     <Section id="services">
         <div className="title">
-        <h2>Services</h2>
+        <h2></h2>
       </div>
       {(services).map((service, index) => {
         return (

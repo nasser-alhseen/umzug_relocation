@@ -101,6 +101,8 @@ export default function Hero() {
 
 
 const Section = styled.section`
+
+
 .btns{
   margin-top:1rem;
 }
@@ -175,7 +177,12 @@ input {
 
   .background {
     height: 100%;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
     img {
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
       width: 100%;
       height:90vh;
       filter: brightness(60%);

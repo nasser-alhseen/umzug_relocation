@@ -31,12 +31,13 @@ export default function Testimonials() {
 
             <div className="info">
               {opinion.name}
-              <div className="details">
-              </div>
+          
             </div>
-            <p>
-              {opinion.content}
-            </p>
+            <div className="details">
+            {opinion.content}
+          
+            </div>
+           
           </div>)}
 
       </div>
@@ -45,6 +46,12 @@ export default function Testimonials() {
 }
 
 const Section = styled.section`
+.details{
+  text-align:center;color:white;
+}
+.info{
+  text-align:center;color:white;
+}
   margin: 5rem 0;
   .title {
     text-align: center;
@@ -98,6 +105,7 @@ margin-right:1rem;
       .testimonial {
         justify-content: center;
         .info {
+          text-align:center;
           flex-direction: column;
           justify-content: center;
         }
