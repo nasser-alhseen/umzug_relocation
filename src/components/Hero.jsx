@@ -37,7 +37,6 @@ export default function Hero() {
           <div className="search">
             <div className="container">
               <label htmlFor="">What is your current address ?</label>
-              <input type="text" />
               <TextField
                 variant="outlined"
                 InputProps={{

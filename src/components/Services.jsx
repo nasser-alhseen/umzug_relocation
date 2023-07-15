@@ -91,9 +91,13 @@ margin-right:1rem;
     }
   }
   @media screen and (min-width: 280px) and (max-width: 720px) {
+    margin-top:6rem;
+
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
   @media screen and (min-width: 720px) and (max-width: 1080px) {
+    margin-top:6rem;
+
     grid-template-columns: repeat(2, 1fr);
   }
 `;

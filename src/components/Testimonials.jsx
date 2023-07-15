@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+import { TextField } from "@material-ui/core";
+
 export default function Testimonials() {
   const [opinions, setOpinions] = useState([]);
 
@@ -31,21 +33,73 @@ export default function Testimonials() {
 
             <div className="info">
               {opinion.name}
-          
+
             </div>
             <div className="details">
-            {opinion.content}
-          
+
+              {opinion.content}
+
             </div>
-           
+
           </div>)}
 
       </div>
+      <div className="formDiv">
+        <TextField variant="outlined" label="Name" InputProps={{
+          style: {
+            height: '3rem', // set the height of the input
+            borderRadius: '4px', // set the border radius
+            padding: '4px 8px', // set the padding
+          },
+        }} />
+        <h2 className="con">     a  </h2>
+        <TextField variant="outlined" label="Review" InputProps={{
+          style: {
+            height: '3rem', // set the height of the input
+            borderRadius: '4px', // set the border radius
+            padding: '4px 8px', // set the padding
+          },
+        }} />
+        <h2 className="con">     a  </h2>
+
+        <button className="btn2" >Submit</button>
+
+      </div>
+
     </Section>
   );
 }
 
 const Section = styled.section`
+.btn2{
+  flex:1;
+ margin-left:5px;
+ padding-left: 2.5rem;
+ padding-right: 2.5rem;
+ padding-top:1rem;
+ padding-bottom:1rem;
+
+ cursor: pointer;
+ border-radius: 0.3rem;
+ border: none;
+ color: white;
+ background-color: #4361ee;
+ font-size: 1.1rem;
+ transition: 0.3s ease-in-out;
+ &:hover {
+   background-color: #023e8a;}
+
+}
+.con{
+  color:white
+}
+.formDiv{
+  margin-top:1rem;
+  text-align:center;
+}
+.opinionsReview{
+  text-align:center;
+}
 .details{
   text-align:center;color:white;
 }
@@ -60,14 +114,15 @@ const Section = styled.section`
   .testimonials {
     display: flex;
     justify-content: center;
-    margin: 0 2rem;
-    gap: 2rem;
+    margin: 0 1rem;
+    gap: 1rem;
     .testimonial {
+      text-align:center;
       background-color:#2656c7;
-      padding-right: 1rem;
-      padding-left: 1rem;
-      padding-top: 0.5rem;
-      padding-bottom: 1rem;
+      height:5rem;
+      padding-left;2rem;
+      padding-right:2rem;
+
 
 
       border-radius:8px;
@@ -106,8 +161,6 @@ margin-right:1rem;
         justify-content: center;
         .info {
           text-align:center;
-          flex-direction: column;
-          justify-content: center;
         }
       }
     }
