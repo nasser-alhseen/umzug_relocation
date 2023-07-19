@@ -12,9 +12,10 @@ export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
       origin: "top",
-      distance: "30px",
-      duration: 900,
+      distance: "80px",
+      duration: 1000,
       reset: true,
+
     });
     sr.reveal(
       `
