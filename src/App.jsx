@@ -12,8 +12,8 @@ export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
       origin: "top",
-      distance: "10px",
-      duration: 700,
+      distance: "30px",
+      duration: 900,
       reset: true,
     });
     sr.reveal(
