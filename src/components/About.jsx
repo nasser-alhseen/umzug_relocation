@@ -22,6 +22,14 @@ export default function About() {
 }
 
 const Section = styled.section`
+margin-bottom:1rem;
+margin-top:0.4rem;
+display:flex;
+align-item:center;
+align-content:center;
+justify-content:center ;
+justify-items:center ;
+
 .title h2{
     text-align:center;
     font-weight: 400;
@@ -30,7 +38,8 @@ const Section = styled.section`
 }
 .pDiv{
     background-color:#2656c7 ;
-    margin:1rem;
+
+   width:20rem;
     padding:1rem;
     border-radius: 1rem;
     
@@ -39,4 +48,28 @@ const Section = styled.section`
 p{
     color:white;
 }
+/* Full HD media query */
+@media only screen and (min-device-width: 1920px) and (max-device-width: 2560px) and (orientation: landscape) {
+    .pDiv{
+        background-color:#2656c7 ;
+    
+       width:40rem;
+        padding:1rem;
+        border-radius: 1rem;
+        
+    
+    }
+}
+
+/* HD media query */
+@media only screen and (min-device-width: 1280px) and (max-device-width: 1920px) and (orientation: landscape) {
+    .pDiv{
+        background-color:#2656c7 ;
+    
+       width:40rem;
+        padding:1rem;
+        border-radius: 1rem;
+        
+    
+    }}
 `;

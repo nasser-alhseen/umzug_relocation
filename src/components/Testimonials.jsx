@@ -5,13 +5,19 @@ import { TextField } from "@material-ui/core";
 
 export default function Testimonials() {
   const [opinions, setOpinions] = useState([]);
+  const [name, setName] = useState('');
+  const [content, setContent] = useState('');
+
+
 
   // function to fetch the list of objects from an API
   const fetchServices = async () => {
     try {
       const response = await fetch('https://jad-umzug.onrender.com/opinions/all');
       const data = await response.json();
-      setOpinions(data['data']);
+      const selectedData = data['data'];
+      const randomData = selectedData.sort(() => Math.random() - 0.5).slice(0, 5);
+      setOpinions(randomData);
     } catch (error) {
       console.error(error);
     }
@@ -21,6 +27,20 @@ export default function Testimonials() {
   useEffect(() => {
     fetchServices();
   }, []);
+  async function uploadOpinion(content, name) {
+    const response = await fetch('https://jad-umzug.onrender.com/opinions/upload', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ content, name })
+    });
+
+    if (!response.ok) throw new Error('Failed to upload opinion');
+
+    setContent('')
+    setName('')
+    fetchServices()
+    console.log(await response.json());
+  }
   return (
     <Section id="testimonials">
       <div className="title">
@@ -45,25 +65,36 @@ export default function Testimonials() {
 
       </div>
       <div className="formDiv">
-        <TextField variant="outlined" label="Name" InputProps={{
-          style: {
-            height: '3rem', // set the height of the input
-            borderRadius: '4px', // set the border radius
-            padding: '4px 8px', // set the padding
-          },
-        }} />
+        <TextField
+          variant="outlined"
+          label="Name"
+          InputProps={{
+            style: {
+              height: '3rem',
+              borderRadius: '4px',
+              padding: '4px 8px',
+            },
+          }}
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
         <h2 className="con">     a  </h2>
-        <TextField variant="outlined" label="Review" InputProps={{
-          style: {
-            height: '3rem', // set the height of the input
-            borderRadius: '4px', // set the border radius
-            padding: '4px 8px', // set the padding
-          },
-        }} />
+        <TextField
+          variant="outlined"
+          label="Review"
+          InputProps={{
+            style: {
+              height: '3rem',
+              borderRadius: '4px',
+              padding: '4px 8px',
+            },
+          }}
+          value={content}
+          onChange={(event) => setContent(event.target.value)}
+        />
         <h2 className="con">     a  </h2>
 
-        <button className="btn2" >Submit</button>
-
+        <button className="btn2" onClick={() => uploadOpinion(content, name)}>Submit</button>
       </div>
 
     </Section>
@@ -102,9 +133,12 @@ const Section = styled.section`
 }
 .details{
   text-align:center;color:white;
+  font-size:1rem;
 }
 .info{
   text-align:center;color:white;
+  font-size:1rem;
+
 }
   margin: 5rem 0;
   .title {
@@ -112,23 +146,22 @@ const Section = styled.section`
     margin-bottom: 2rem;
   }
   .testimonials {
+
     display: flex;
     justify-content: center;
     margin: 0 1rem;
     gap: 1rem;
     .testimonial {
-      text-align:center;
+      justify-content: center;
+        .info {
+          text-align:center;
+        }
       background-color:#2656c7;
-      height:5rem;
-      padding-left;2rem;
-      padding-right:2rem;
-
-
-
-      border-radius:8px;
-      margin-left:1rem;
-margin-right:1rem;
-      border-radius: 0.5rem;
+      margin-right:2rem;
+      margin-left:2rem;
+      text-align:center;
+      border-radius:0.5rem;
+      padding-bottom:1rem;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       transition: 0.3s ease-in-out;
       &:hover {

@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <Section id="hero">
       <div className="background">
-        <img src={homeImage} alt="" />
+        <img className="backImg"  src={homeImage} alt="" />
       </div>
       <div className="content">
         <div className="navW">
@@ -248,6 +248,12 @@ input {
     }
   }
   @media screen and (min-width: 280px) and (max-width: 980px) {
+    .background{
+      height:10vh;
+    }
+    .backImg{
+      height:10vh;
+    }
     height: 25rem;
    margin-bottom:10vh;
     .background {
