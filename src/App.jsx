@@ -14,21 +14,22 @@ export default function App() {
       origin: "top",
       distance: "80px",
       duration: 1000,
-      reset: true,
+      reset: false,
 
     });
     sr.reveal(
       `
-     
+
         #hero,
         #services,
         #recommend,
         #testimonials,
         footer
+        #aboutus
         `,
       {
-        opacity: 0,
-        interval: 300,
+        opacity: 0.5,
+        interval: 200,
       }
     );
   }, []);
