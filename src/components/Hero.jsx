@@ -302,4 +302,13 @@ input {
       }
     }
   }
+  @media only screen and (max-width: 767px) {
+    .background {
+      img {
+        width: 100%;
+        height:70vh;
+        filter: brightness(60%);
+      }
+    }}
+
 `;

@@ -39,7 +39,7 @@ justify-items:center ;
 .pDiv{
     background-color:#2656c7 ;
 
-   width:20rem;
+   width:50rem;
     padding:1rem;
     border-radius: 1rem;
     
@@ -48,28 +48,16 @@ justify-items:center ;
 p{
     color:white;
 }
-/* Full HD media query */
-@media only screen and (min-device-width: 1920px) and (max-device-width: 2560px) and (orientation: landscape) {
+/* Mobile phones media query */
+@media only screen and (max-width: 767px) {
     .pDiv{
         background-color:#2656c7 ;
     
-       width:40rem;
-        padding:1rem;
-        border-radius: 1rem;
-        
-    
-    }
-}
-
-/* HD media query */
-@media only screen and (min-device-width: 1280px) and (max-device-width: 1920px) and (orientation: landscape) {
-    .pDiv{
-        background-color:#2656c7 ;
-    
-       width:40rem;
+       width:20rem;
         padding:1rem;
         border-radius: 1rem;
         
     
     }}
+
 `;

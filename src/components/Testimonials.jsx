@@ -55,6 +55,9 @@ export default function Testimonials() {
               {opinion.name}
 
             </div>
+            <div className="t">
+              hi
+            </div>
             <div className="details">
 
               {opinion.content}
@@ -70,9 +73,9 @@ export default function Testimonials() {
           label="Name"
           InputProps={{
             style: {
-              height: '3rem',
+              height: '2.5rem',
               borderRadius: '4px',
-              padding: '4px 8px',
+              padding: '4px',
             },
           }}
           value={name}
@@ -84,9 +87,9 @@ export default function Testimonials() {
           label="Review"
           InputProps={{
             style: {
-              height: '3rem',
+              height: '2.5rem',
               borderRadius: '4px',
-              padding: '4px 8px',
+              padding: '4px',
             },
           }}
           value={content}
@@ -102,6 +105,10 @@ export default function Testimonials() {
 }
 
 const Section = styled.section`
+.t{
+ color: #2656c7;
+
+}
 .btn2{
   flex:1;
  margin-left:5px;
@@ -133,69 +140,67 @@ const Section = styled.section`
 }
 .details{
   text-align:center;color:white;
-  font-size:1rem;
+  font-size:0.9rem;
 }
 .info{
   text-align:center;color:white;
   font-size:1rem;
 
 }
-  margin: 5rem 0;
-  .title {
-    text-align: center;
-    margin-bottom: 2rem;
+margin: 5rem 0;
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.testimonials {
+  display: flex;
+  justify-content: center;
+  margin: 0 2rem;
+  gap: 2rem;
+  .testimonial {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    background-color: #2656c7;
+    padding: 2rem;
+    margin-left:1rem;
+    margin-right:1rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      transform: translateX(0.4rem) translateY(-1rem);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .info {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1rem;
+      img {
+        border-radius: 3rem;
+        height: 3rem;
+      }
+      .details {
+        span {
+          font-size: 0.9rem;
+        }
+      }
+    }
   }
+}
+@media screen and (min-width: 280px) and (max-width: 768px) {
   .testimonials {
-
-    display: flex;
-    justify-content: center;
-    margin: 0 1rem;
-    gap: 1rem;
+    flex-direction: column;
+    margin: 0;
     .testimonial {
       justify-content: center;
-        .info {
-          text-align:center;
-        }
-      background-color:#2656c7;
-      margin-right:2rem;
-      margin-left:2rem;
-      text-align:center;
-      border-radius:0.5rem;
-      padding-bottom:1rem;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      transition: 0.3s ease-in-out;
-      &:hover {
-        transform: translateX(0.4rem) translateY(-1rem);
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
       .info {
-        display: flex;
+        flex-direction: column;
         justify-content: center;
-        gap: 1rem;
-        align-items: center;
-        margin-top: 1rem;
-        img {
-          border-radius: 3rem;
-          height: 3rem;
-        }
-        .details {
-          span {
-            font-size: 0.9rem;
-          }
-        }
       }
     }
   }
-  @media screen and (min-width: 280px) and (max-width: 768px) {
-    .testimonials {
-      flex-direction: column;
-      margin: 0;
-      .testimonial {
-        justify-content: center;
-        .info {
-          text-align:center;
-        }
-      }
-    }
-  }
+}
 `;
